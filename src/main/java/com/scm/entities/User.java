@@ -16,7 +16,9 @@ import lombok.Setter;
 
 import java.util.*;
 
+import jakarta.persistence.EnumType;
 import jakarta.persistence.FetchType;
+
 
 @Entity(name="user")
 @Table(name="users")
@@ -31,11 +33,11 @@ public class User {
     @Id
     private String userid;
     @Column(name="user_name",nullable=false)
+
     private String name;
     @Column(unique=true,nullable=false)
     private String email;
     private String password;
-    @Column(length=1000)
     private String about;
     @Column(length=1000)
     private String profilePic;
@@ -46,6 +48,8 @@ public class User {
     private boolean emailVerified=false;
     private boolean phoneVerified=false;
 
+
+    @Enumerated(value = EnumType.STRING)
     //self,google,git
     private Providers provider=Providers.SELF;
     private String providerUserId;

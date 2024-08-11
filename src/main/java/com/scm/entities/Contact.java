@@ -26,7 +26,7 @@ public class Contact {
     private String picture;
     @Column(length=1000)
     private String description;
-    private boolean  favorite=false;
+    private boolean favorite=false;
     private String websiteLink;
     private String LinkedinLink;
 

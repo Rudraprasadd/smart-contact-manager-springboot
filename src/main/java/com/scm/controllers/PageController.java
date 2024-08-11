@@ -12,6 +12,12 @@ import com.scm.entities.User;
 import com.scm.forms.UserForm;
 import com.scm.services.UserService;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
 
 
 
@@ -72,17 +78,23 @@ public class PageController {
         //fetch data
         //user form
         System.out.println(userForm);
-        //validate
-        //save to db
-        User user=User.builder()
-        .name(userForm.getName())
-        .email(userForm.getEmail())
-        .password(userForm.getPassword())
-        .about(userForm.getAbout())
-        .phoneNumber(userForm.getPhoneNumber())
-        .build();
+        // validate
+        // save to db
+        // User user=User.builder()
+        // .name(userForm.getName())
+        // .email(userForm.getEmail())
+        // .password(userForm.getPassword())
+        // .about(userForm.getAbout())
+        // .phoneNumber(userForm.getPhoneNumber())
+        // .build();
 
-
+        User user =new User();
+        user.setName(userForm.getName());
+        user.setEmail(userForm.getEmail());
+        user.setPassword(userForm.getPassword());
+        user.setAbout(userForm.getAbout());
+        user.setPhoneNumber(userForm.getPhoneNumber());
+        user.setProfilePic("profilePic");
 
         User SavedUser=userService.saveUser(user);
         System.out.println("User saved");
