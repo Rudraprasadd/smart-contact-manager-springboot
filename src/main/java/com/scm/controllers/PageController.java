@@ -10,14 +10,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.scm.entities.User;
 import com.scm.forms.UserForm;
+import com.scm.helpers.Message;
+import com.scm.helpers.MessageType;
 import com.scm.services.UserService;
 
+import jakarta.servlet.http.HttpSession;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-
 
 
 
@@ -73,7 +75,7 @@ public class PageController {
     
     //reg process
     @RequestMapping(value="/do-register" ,method=RequestMethod.POST)
-    public String processRegister(@ModelAttribute UserForm userForm){
+    public String processRegister(@ModelAttribute UserForm userForm,HttpSession session){
         System.out.println("Processing");
         //fetch data
         //user form
@@ -100,6 +102,8 @@ public class PageController {
         System.out.println("User saved");
         //userservice
         //success message
+        Message message=Message.builder().content("Registration Sucessful").type(MessageType.green).build();
+        session.setAttribute("message", message);
         //redirect to Login
         return "redirect:/register";
     }
