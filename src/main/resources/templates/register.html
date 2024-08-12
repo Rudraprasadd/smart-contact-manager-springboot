@@ -12,6 +12,8 @@
             </div>
             <div class="col-span-12 md:col-span-8 lg:col-span-6 xl:col-span-4">
                 <div class="block  p-6 border-t-[10px] border-blue-700 bg-white rounded-xl shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-blue-700 dark:hover:bg-gray-700">
+                   
+                    <div data-th-replace="message::messagebox"></div>
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Signup Here</h5>
                     <p class="font-normal text-gray-400 dark:text-gray-400">
                         Start managing contacts on cloud
@@ -35,8 +37,8 @@
                     </div>
                     <div class="mb-3">
                         <div class="mb-5">
-                            <label for="Password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">New Password</label>
-                            <input th:field="*{password}" type="Password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter password" required />
+                            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Enter password</label>
+                            <input data-th-field="*{password}" type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                           </div>
                     </div>
                     <div class="mb-3">

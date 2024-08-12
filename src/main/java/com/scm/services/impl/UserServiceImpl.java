@@ -14,7 +14,6 @@ import com.scm.helpers.ResourceNotFoundException;
 import com.scm.repositories.UserRepo;
 import com.scm.services.UserService;
 
-
 @Service
 public class UserServiceImpl implements UserService {
 
