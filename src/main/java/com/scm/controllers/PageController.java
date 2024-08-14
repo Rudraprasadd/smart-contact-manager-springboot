@@ -102,7 +102,7 @@ public class PageController {
         System.out.println("User saved");
         //userservice
         //success message
-        Message message=Message.builder().content("Registration Sucessful").type(MessageType.green).build();
+        Message message=Message.builder().content("Registration Sucessful").type(MessageType.yellow).build();
         session.setAttribute("message", message);
         //redirect to Login
         return "redirect:/register";
