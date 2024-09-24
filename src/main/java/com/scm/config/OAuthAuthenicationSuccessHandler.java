@@ -1,21 +1,15 @@
 package com.scm.config;
 
 import java.io.IOException;
-import java.util.List;
-import java.util.UUID;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.oauth2.core.user.DefaultOAuth2User;
 import org.springframework.security.web.DefaultRedirectStrategy;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
 
-import com.scm.entities.Providers;
-import com.scm.entities.User;
-import com.scm.helpers.AppConstants;
 import com.scm.repositories.UserRepo;
 
 import jakarta.servlet.ServletException;
@@ -36,6 +30,26 @@ public class OAuthAuthenicationSuccessHandler implements AuthenticationSuccessHa
             Authentication authentication) throws IOException, ServletException {
                 
                 logger.info("OauthAuthenicationSuccessHandler");
+
+                //Google
+                //Google Attributes
+
+
+                //Github
+                //Github Attributes
+
+
+                //Facebook
+                //Facebook Attributes
+
+                //Linkedin
+                //LinkedIn Attributes
+
+                
+
+                /**
+                 * 
+                  
                 
                 DefaultOAuth2User user=(DefaultOAuth2User)authentication.getPrincipal();
 
@@ -76,6 +90,8 @@ public class OAuthAuthenicationSuccessHandler implements AuthenticationSuccessHa
                     logger.info("User saved:"+email);
                     
                 }
+
+                */
 
 
                 new DefaultRedirectStrategy().sendRedirect(request, response, "/user/profile");
