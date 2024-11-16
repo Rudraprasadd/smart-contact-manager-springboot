@@ -75,6 +75,8 @@ public class User implements UserDetails{
     private List<String> roleList = new ArrayList<>();
 
 
+
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
 
