@@ -1,0 +1,5 @@
+npx tailwindcss -i .\src\main\resources\static\css\input.css -o .\src\main\resources\static\css\output.css --watch
+
+command for starting tailwind css
+
+this is a spring boot contact management project where we can store and manage contacts on cloud
