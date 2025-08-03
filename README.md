@@ -29,9 +29,6 @@ A secure and scalable **Spring Boot web application** where users can store and 
 
 ---
 
-## 🔧 Installation & Setup Guide
-
-Follow these steps to run the project locally:
 
 ### 📌 Prerequisites
 
